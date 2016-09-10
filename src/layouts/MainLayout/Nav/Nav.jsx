@@ -6,7 +6,7 @@ const MenuItemGroup = Menu.ItemGroup;
 const Nav = React.createClass({
   getInitialState() {
     return {
-      current: 'basic-info',
+      current: 'home',
     };
   },
   handleClick(e) {
@@ -21,6 +21,9 @@ const Nav = React.createClass({
         selectedKeys={[this.state.current]}
         mode="horizontal"
       >
+        <Menu.Item key="home">
+          <Icon type="mail" />首页
+        </Menu.Item>
         <Menu.Item key="basic-info">
           <Icon type="mail" />基本情况
         </Menu.Item>
