@@ -22,7 +22,7 @@ const Nav = React.createClass({
         mode="horizontal"
       >
         <Menu.Item key="home">
-          <Link to="/"><Icon type="mail" />首页</Link>
+          <Link to="/"><Icon type="home" />首页</Link>
         </Menu.Item>
         <Menu.Item key="basicInfo">
           <Link to="/basicInfo">海洋油气工程实验中心简介</Link>
@@ -43,7 +43,7 @@ const Nav = React.createClass({
           <Link to="/achievement">成果与示范</Link>
         </Menu.Item>
         <Menu.Item key="teachOutline">
-          <Link to="/teachOutline">实验教学大纲</Link>
+          <Link to="/teachOutline">实验教学大纲及实验课程简介</Link>
         </Menu.Item>
       </Menu>
     );
