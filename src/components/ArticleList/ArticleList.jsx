@@ -1,23 +1,24 @@
 import React, { Component, PropTypes } from 'react';
 import { Router, Route, IndexRoute, Link } from 'react-router';
 import { Row, Col, Menu, Icon} from 'antd';
+import ArticleContainer from './ArticleContainer'
 import styles from './ArticleList.less';
 const ArticleList = React.createClass({
   getInitialState(){
     return {
       list: [],
-      article: {
-        title: '',
-        text: ''
-      },
-      type: this.props.type,
-      articleId: this.props.articleId
+      type: this.props.params.type,
+      articleId: this.props.params.articleId
     }
   },
   componentDidMount(){
     var type = this.props.params.type,
         articleId = this.props.params.articleId,
         that = this;
+    this.setState({
+      type: this.props.params.type,
+      articleId: this.props.params.articleId,
+    })
     if(type){
       fetch('/json-data/type/'+ type +'.json').then(function(response) {
         if (response.status >= 400) {
@@ -33,32 +34,14 @@ const ArticleList = React.createClass({
     }else{
 
     }
-    if(articleId){
-      fetch('/json-data/article/'+ articleId +'.json').then(function(response) {
-        if (response.status >= 400) {
-          throw new Error("Bad response from server");
-        }
-        return response.json();
-      })
-      .then(function(stories) {
-        that.setState({
-          article: stories
-        })
-      })
-    }else{
-      that.setState({
-        article: {
-          title: '',
-          text: ''
-        }
-      })
-    }
   },
   render() {
     var listItems = []
+    var type = this.state.type
     this.state.list.forEach(function(element){
+      var linkToAddr = '/'+ type + '/' + element.articleId
       listItems.push(
-        <Menu.Item key={element.articleId}>{element.title}</Menu.Item>
+        <Menu.Item key={element.articleId}><Link to={linkToAddr}>{element.title}</Link></Menu.Item>
       )
     })
     return(
@@ -73,14 +56,7 @@ const ArticleList = React.createClass({
           </Col>
           <Col className="gutter-row" span={18}>
             <div className="gutter-box">
-              <article>
-                <div class={styles.title}>
-                  <h1>{this.state.article.title}</h1>
-                </div>
-                <div class={styles.text}>
-                  {this.state.article.text}
-                </div>
-              </article>
+              <ArticleContainer articleId={this.state.articleId}></ArticleContainer>
             </div>
           </Col>
         </Row>
