@@ -8,7 +8,11 @@ const MainLayout = ({ children }) => {
   return (
     <div>
       <header>
-        <div className={styles.headerBg} ></div>
+        <div className={styles.headerBg} >
+          <Link to="/">
+            <div className={styles.headerLogo}></div>
+          </Link>
+        </div>
       </header>
       <div className={styles.mainContainer}>
         <div className={styles.nav}>
@@ -16,8 +20,6 @@ const MainLayout = ({ children }) => {
         </div>
         {children}
       </div>
-
-
     </div>
   );
 };
