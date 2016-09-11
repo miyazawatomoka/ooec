@@ -6,6 +6,8 @@ const MenuItemGroup = Menu.ItemGroup;
 
 const Nav = React.createClass({
   getInitialState() {
+    // 需要重构 修复了nav不能根据链接选择的问题
+    window.nav = this;
     return {
       current: 'home',
     };
