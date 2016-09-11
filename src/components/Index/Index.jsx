@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Row, Col } from 'antd';
+import { Link } from 'react-router';
 import ListCard from './ListCard'
 import styles from './Index.less';
 require('es6-promise').polyfill();

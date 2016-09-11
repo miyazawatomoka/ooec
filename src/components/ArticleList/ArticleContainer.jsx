@@ -4,10 +4,7 @@ const ArticleContainer = React.createClass({
   getInitialState() {
     return{
       articleId : this.props.articleId,
-      article: {
-        title: '',
-        text: ''
-      }
+      article: ''
     }
   },
   componentWillReceiveProps(nextProps){
@@ -21,26 +18,24 @@ const ArticleContainer = React.createClass({
       var articleId = this.state.articleId
     }
     if(articleId){
-      fetch('/json-data/article/'+ articleId +'.json').then(function(response) {
+      fetch('/json-data/article/'+ articleId +'.html').then(function(response) {
         if (response.status >= 400) {
           that.setState({
-            article: {}
+            article: ""
           })
           throw new Error("Bad response from server");
         }
-        return response.json();
+        return response.text();
       })
       .then(function(stories) {
+        console.log(stories)
         that.setState({
           article: stories
         })
       })
     }else{
       that.setState({
-        article: {
-          title: '',
-          text: ''
-        }
+        article: ""
       })
     }
   },
@@ -50,13 +45,8 @@ const ArticleContainer = React.createClass({
 
   render(){
     return(
-      <article>
-        <div class={styles.title}>
-          <h1>{this.state.article.title}</h1>
-        </div>
-        <div class={styles.text}>
-          {this.state.article.text}
-        </div>
+      <article dangerouslySetInnerHTML={{__html: this.state.article}} className={styles.text}>
+
       </article>
     )
   }

@@ -28,8 +28,8 @@ const Nav = React.createClass({
         <Menu.Item key="basicInfo">
           <Link to="/basicInfo">海洋油气工程实验中心简介</Link>
         </Menu.Item>
-        <Menu.Item key="teachers">
-          <Link to="/teachers" >师资队伍</Link>
+        <Menu.Item key="professors">
+          <Link to="/professors" >师资队伍</Link>
         </Menu.Item>
         <Menu.Item key="textbooks">
           <Link to="/textbooks">教材建设</Link>
@@ -40,8 +40,8 @@ const Nav = React.createClass({
         <Menu.Item key="rules">
           <Link to="/rules">实验教学管理规定</Link>
         </Menu.Item>
-        <Menu.Item key="result">
-          <Link to="/result">成果与示范</Link>
+        <Menu.Item key="achievement">
+          <Link to="/achievement">成果与示范</Link>
         </Menu.Item>
         <Menu.Item key="teachOutline">
           <Link to="/teachOutline">实验教学大纲</Link>

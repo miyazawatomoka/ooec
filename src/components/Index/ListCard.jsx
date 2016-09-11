@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Card } from 'antd';
+import { Link } from 'react-router';
 import styles from './ListCard.less';
 
 const ListCard = ({cardInfo}) => {
@@ -9,11 +10,11 @@ const ListCard = ({cardInfo}) => {
   var list = new Array();
   for (var i=0; i<min; i++) {
     list.push(
-      <li><a href={linkList[0].link}>{linkList[i].title}</a></li>
+      <li><Link to={linkList[0].link}>{linkList[i].title}</Link></li>
     )
   }
   return(
-    <Card title= {cardInfo.title} extra={<a href={cardInfo.moreLink}>More</a>} className={styles.card}>
+    <Card title= {cardInfo.title} extra={<Link to={cardInfo.moreLink}>More</Link>} className={styles.card}>
       <ul className={styles.cardList}>
         {list}
       </ul>

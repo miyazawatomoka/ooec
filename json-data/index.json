@@ -1,61 +1,67 @@
 [
   {
-    "title": "基本情况",
-    "moreLink": "http://www.bilibili.tv",
+    "title": "海洋油气工程实验中心简介",
+    "moreLink": "/basicInfo",
     "list": [
       {
-        "title": "11111111111111111212121212111111111111111111111111111tttt",
-        "link": "http://www.bilibili.tv"
+        "title": "海洋油气工程系基本情况",
+        "link": "/basicInfo/1"
       }
     ]
   },
   {
     "title": "教材建设",
-    "moreLink": "http://www.bilibili.tv",
+    "moreLink": "/textbooks",
     "list": [
       {
-        "title": "11111111111111111212121212111111111111111111111111111tttt",
-        "link": "http://www.bilibili.tv"
+        "title": "教材建设情况",
+        "link": "/textbooks/3"
       }
     ]
   },
   {
     "title": "科研项目",
-    "moreLink": "http://www.bilibili.tv",
-    "list": [
-      {
-        "title": "11111111111111111212121212111111111111111111111111111tttt",
-        "link": "http://www.bilibili.tv"
-      }
-    ]
+    "moreLink": "/researches",
+    "list": []
   },
   {
     "title": "实验室规章制度",
-    "moreLink": "http://www.bilibili.tv",
+    "moreLink": "/rules",
     "list": [
       {
-        "title": "11111111111111111212121212111111111111111111111111111tttt",
-        "link": "http://www.bilibili.tv"
+        "title": "高等学校实验室工作规程",
+        "link": "/rules/4"
+      },
+      {
+        "title": "西安石油大学实验教学管理规定",
+        "link": "/rules/5"
+      },
+      {
+        "title": "西安石油大学实验室安全管理办法",
+        "link": "/rules/6"
       }
     ]
   },
   {
-    "title": "仪器介绍",
-    "moreLink": "http://www.bilibili.tv",
+    "title": "成果与示范",
+    "moreLink": "/achievement",
     "list": [
       {
-        "title": "11111111111111111212121212111111111111111111111111111tttt",
-        "link": "http://www.bilibili.tv"
+        "title": "实验教学中心教学效果、主要建设成果和示范作用",
+        "link": "/achievement/7"
+      },
+      {
+        "title": "实验教学中心特色",
+        "link": "/achievement/8"
       }
     ]
   },
   {
-    "title": "师资队伍",
-    "moreLink": "http://www.bilibili.tv",
+    "title": "实验教学大纲及实验课程中英文简介",
+    "moreLink": "/teachOutline",
     "list": [
       {
-        "title": "11111111111111111212121212111111111111111111111111111tttt",
-        "link": "http://www.bilibili.tv"
+        "title": "/teachOutline/9"
       }
     ]
   }
