@@ -11,7 +11,6 @@ const Nav = React.createClass({
     };
   },
   handleClick(e) {
-    console.log('click ', e);
     this.setState({
       current: e.key,
     });

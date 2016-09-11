@@ -28,7 +28,6 @@ const ArticleContainer = React.createClass({
         return response.text();
       })
       .then(function(stories) {
-        console.log(stories)
         that.setState({
           article: stories
         })
