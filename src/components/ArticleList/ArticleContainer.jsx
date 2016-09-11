@@ -10,13 +10,22 @@ const ArticleContainer = React.createClass({
       }
     }
   },
-
-  componentDidMount() {
-    var articleId = this.state.articleId;
+  componentWillReceiveProps(nextProps){
+    this.updateState(nextProps)
+  },
+  updateState(props){
     var that = this
+    if (props){
+      var articleId = props.articleId
+    }else{
+      var articleId = this.state.articleId
+    }
     if(articleId){
       fetch('/json-data/article/'+ articleId +'.json').then(function(response) {
         if (response.status >= 400) {
+          that.setState({
+            article: {}
+          })
           throw new Error("Bad response from server");
         }
         return response.json();
@@ -34,6 +43,9 @@ const ArticleContainer = React.createClass({
         }
       })
     }
+  },
+  componentDidMount() {
+    this.updateState();
   },
 
   render(){

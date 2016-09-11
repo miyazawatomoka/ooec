@@ -11,17 +11,31 @@ const ArticleList = React.createClass({
       articleId: this.props.params.articleId
     }
   },
-  componentDidMount(){
-    var type = this.props.params.type,
-        articleId = this.props.params.articleId,
-        that = this;
+
+  componentWillReceiveProps(nextProps){
+    this.updateState(nextProps)
+  },
+
+  updateState(props) {
+    var that = this;
+    if (props){
+      var type = props.params.type
+      var articleId = props.params.articleId
+    }
+    else{
+      var type =   this.props.params.type,
+          articleId = this.props.params.articleId
+    }
     this.setState({
-      type: this.props.params.type,
-      articleId: this.props.params.articleId,
+      type: type,
+      articleId: articleId,
     })
     if(type){
       fetch('/json-data/type/'+ type +'.json').then(function(response) {
         if (response.status >= 400) {
+          that.setState({
+            list: []
+          })
           throw new Error("Bad response from server");
         }
         return response.json();
@@ -34,6 +48,10 @@ const ArticleList = React.createClass({
     }else{
 
     }
+  },
+
+  componentDidMount(){
+    this.updateState();
   },
   render() {
     var listItems = []
