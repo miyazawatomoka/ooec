@@ -29,22 +29,22 @@ const Nav = React.createClass({
           <Link to="/basicInfo">海洋油气工程实验中心简介</Link>
         </Menu.Item>
         <Menu.Item key="teachers">
-          <Link to="teachers" >师资队伍</Link>
+          <Link to="/teachers" >师资队伍</Link>
         </Menu.Item>
         <Menu.Item key="textbooks">
-          <Link to="textbooks">教材建设</Link>
+          <Link to="/textbooks">教材建设</Link>
         </Menu.Item>
         <Menu.Item key="researches">
-          <Link to="researches">科研项目</Link>
+          <Link to="/researches">科研项目</Link>
         </Menu.Item>
         <Menu.Item key="rules">
-          <Link to="rules">实验教学管理规定</Link>
+          <Link to="/rules">实验教学管理规定</Link>
         </Menu.Item>
         <Menu.Item key="result">
-          <Link to="result">成果与示范</Link>
+          <Link to="/result">成果与示范</Link>
         </Menu.Item>
         <Menu.Item key="teachOutline">
-          <Link to="teachOutline">实验教学大纲</Link>
+          <Link to="/teachOutline">实验教学大纲</Link>
         </Menu.Item>
       </Menu>
     );
