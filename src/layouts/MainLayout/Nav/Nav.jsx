@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Menu, Icon } from 'antd';
+import { Link } from 'react-router';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -22,28 +23,28 @@ const Nav = React.createClass({
         mode="horizontal"
       >
         <Menu.Item key="home">
-          <Icon type="mail" />首页
+          <Link to="/"><Icon type="mail" />首页</Link>
         </Menu.Item>
         <Menu.Item key="basicInfo">
-          海洋油气工程实验中心简介
+          <Link to="/basicInfo">海洋油气工程实验中心简介</Link>
         </Menu.Item>
         <Menu.Item key="teachers">
-          师资队伍
+          <Link to="teachers" >师资队伍</Link>
         </Menu.Item>
         <Menu.Item key="textbooks">
-          教材建设
+          <Link to="textbooks">教材建设</Link>
         </Menu.Item>
         <Menu.Item key="researches">
-          科研项目
+          <Link to="researches">科研项目</Link>
         </Menu.Item>
         <Menu.Item key="rules">
-          实验教学管理规定
+          <Link to="rules">实验教学管理规定</Link>
         </Menu.Item>
         <Menu.Item key="result">
-          成果与示范
+          <Link to="result">成果与示范</Link>
         </Menu.Item>
         <Menu.Item key="teachOutline">
-          实验教学大纲
+          <Link to="teachOutline">实验教学大纲</Link>
         </Menu.Item>
       </Menu>
     );
