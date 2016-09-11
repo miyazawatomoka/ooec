@@ -24,23 +24,26 @@ const Nav = React.createClass({
         <Menu.Item key="home">
           <Icon type="mail" />首页
         </Menu.Item>
-        <Menu.Item key="basic-info">
-          <Icon type="mail" />基本情况
+        <Menu.Item key="basicInfo">
+          海洋油气工程实验中心简介
         </Menu.Item>
         <Menu.Item key="teachers">
-          <Icon type="Navstore" />师资队伍
+          师资队伍
         </Menu.Item>
         <Menu.Item key="textbooks">
-          <Icon type="mail" />教材建设
+          教材建设
         </Menu.Item>
         <Menu.Item key="researches">
-          <Icon type="mail" />科研项目
+          科研项目
         </Menu.Item>
         <Menu.Item key="rules">
-          <Icon type="mail" />实验室规章制度
+          实验教学管理规定
         </Menu.Item>
-        <Menu.Item key="instruments">
-          <Icon type="mail" />仪器介绍
+        <Menu.Item key="result">
+          成果与示范
+        </Menu.Item>
+        <Menu.Item key="teachOutline">
+          实验教学大纲
         </Menu.Item>
       </Menu>
     );
