@@ -8,7 +8,7 @@ const Article = React.createClass({
       list: [],
       article: {
         title: '',
-        text: ' '
+        text: ''
       }
     }
   },
@@ -47,7 +47,7 @@ const Article = React.createClass({
       that.setState({
         article: {
           title: '',
-          text: ' '
+          text: ''
         }
       })
     }
