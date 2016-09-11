@@ -1,15 +1,17 @@
 import React, { Component, PropTypes } from 'react';
 import { Router, Route, IndexRoute, Link } from 'react-router';
 import { Row, Col, Menu, Icon} from 'antd';
-import styles from './Article.less';
-const Article = React.createClass({
+import styles from './ArticleList.less';
+const ArticleList = React.createClass({
   getInitialState(){
     return {
       list: [],
       article: {
         title: '',
         text: ''
-      }
+      },
+      type: this.props.type,
+      articleId: this.props.articleId
     }
   },
   componentDidMount(){
@@ -87,4 +89,4 @@ const Article = React.createClass({
   }
 })
 
-export default Article;
+export default ArticleList;
